@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PS2Tube</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>PS2Tube</h1>
+    <p class="code">Codigo <span id="code">...</span></p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Ahora</h2>
+      <div id="now" class="now empty">Nada en reproduccion</div>
+    </section>
+
+    <section class="card">
+      <h2>Agregar</h2>
+      <textarea id="urls" rows="3"
+        placeholder="Pega uno o varios enlaces de YouTube (uno por linea)"></textarea>
+      <button id="add" class="primary">Agregar a la cola</button>
+    </section>
+
+    <section class="card">
+      <h2>Cola</h2>
+      <ul id="queue"></ul>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

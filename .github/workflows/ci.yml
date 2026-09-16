@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build-and-test:
+    name: Compilacion y tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements-dev.txt
+
+      - name: Validar compilacion
+        run: python -m compileall -q app scripts
+
+      - name: Validar import de la app
+        run: python -c "import app.main; print('import ok')"
+
+      - name: Lint
+        run: ruff check .
+
+      - name: Tests
+        run: pytest -q

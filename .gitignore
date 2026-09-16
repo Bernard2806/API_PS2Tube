@@ -201,3 +201,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# PS2Tube
+data/
+*.db
+cache/
+temp/
