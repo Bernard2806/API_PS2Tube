@@ -82,4 +82,4 @@ derechos de autor. Usá este proyecto para contenido propio o con permiso.
 
 ## Licencia
 
-Sin definir todavía.
+MIT. Ver [LICENSE](LICENSE).
